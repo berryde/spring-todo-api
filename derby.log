@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Jun 06 13:07:00 BST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0181-38e9-4375-0000013db9b8 
+on database directory memory:/home/danb/Documents/spring-todo-api/a3d5f0e1-febf-404a-9008-102a6bc26c7c with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7 
+Loaded from file:/home/danb/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=18.0.1.1+2-6
+user.dir=/home/danb/Documents/spring-todo-api
+os.name=Linux
+os.arch=amd64
+os.version=5.15.41-1-MANJARO
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
