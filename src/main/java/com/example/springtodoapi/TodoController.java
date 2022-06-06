@@ -35,19 +35,21 @@ public class TodoController {
 
     // HTTP POST
     @PostMapping("/tasks/")
-    public void addTask(@RequestBody Todo todo) {
+    public Todo addTask(@RequestBody Todo todo) {
         todo.setId(UUID.randomUUID().toString());
         this.todoRepository.save(todo);
+        return todo;
     }
 
     // HTTP PUT
     @PutMapping("/tasks/{id}")
-    public void updateTask(@PathVariable String id, @RequestBody Todo todo) {
+    public Todo updateTask(@PathVariable String id, @RequestBody Todo todo) {
         if (!this.todoRepository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "task not found");
         }
         todo.setId(id);
         this.todoRepository.save(todo);
+        return todo;
     }
 
     // HTTP DELETE
