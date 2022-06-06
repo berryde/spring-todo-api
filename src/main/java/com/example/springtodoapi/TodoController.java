@@ -4,11 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+
 import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TodoController {
 
     private final TodoRepository todoRepository;
@@ -51,7 +52,7 @@ public class TodoController {
 
     // HTTP DELETE
     @DeleteMapping("/tasks/{id}")
-    public void deleteTaskById(String id) {
+    public void deleteTaskById(@PathVariable String id) {
         if (!this.todoRepository.existsById(id)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "task not found");
         }
